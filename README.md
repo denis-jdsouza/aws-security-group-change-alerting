@@ -3,7 +3,7 @@
 ## Overview
 An AWS Lambda function for alerting to Slack when any changes are made to Security Groups
 
-## Supported AWS Cloudtrail events
+## Supported AWS CloudTrail events
 ```
 AuthorizeSecurityGroupIngress
 AuthorizeSecurityGroupEgress
@@ -14,7 +14,13 @@ DeleteSecurityGroup
 ```
 
 ## Configuration
-1. Configure an AWS Lambda function using the code in this repo (Python3.7 supported)
+1. Configure an AWS Lambda function using the code in this repo (Python3.7 supported)\
+*Note:*\
+The following environment variables should be configured for Lambda function
+```
+SLACK_CHANNEL
+SLACK_TOKEN
+```
 2. Enable AWS CloudTrail logging (if not already done) to log '*Management events*
 ' (single/multi Region trails are supported)
 3. Create an AWS Cloudwatch Rule (found under the 'Events' section) with the following pattern
