@@ -21,8 +21,8 @@ def get_changes(event):
         sg_id = event.get("detail").get("requestParameters").get("groupName")
     else:
         sg_id = sg_id[0]
-    changes = str((event.get("detail").get("requestParameters").get("ipPermissions") if event.get("detail").get(
-        "requestParameters").get("ipPermissions") else event.get("detail").get("requestParameters")))
+    changes = dumps((event.get("detail").get("requestParameters").get("ipPermissions") if event.get("detail").get(
+        "requestParameters").get("ipPermissions") else event.get("detail").get("requestParameters")), indent=1)
     timestamp = event.get("detail").get("eventTime")
     region = event.get("detail").get("awsRegion")
     return change_type, user_account, sg_id, changes, timestamp, region
