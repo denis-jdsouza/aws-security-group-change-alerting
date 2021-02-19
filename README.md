@@ -48,6 +48,7 @@ SLACK_TOKEN
 }
 ```
 4. Configure the AWS Lambda function as a target for AWS Cloudwatch Rule (in step-3), this will invoke the Lambda function when an event matches the given pattern.
+5. (Optional) test the Lambda function using the dummy event provided in the file '*cloudtrail-event.json*'
 
 ## Slack alerts
 <img src="img/slack-alerts.png" width="650">

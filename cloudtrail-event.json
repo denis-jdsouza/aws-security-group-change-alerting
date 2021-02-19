@@ -1,0 +1,66 @@
+{
+    "version": "0",
+    "id": "030cd8a2-511e-6e9b-ba8a",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2",
+    "account": "xyz",
+    "time": "2021-02-18T08:43:41Z",
+    "region": "ap-south-1",
+    "resources": [],
+    "detail": {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "xyz",
+        "arn": "arn:aws:iam::xyz:root",
+        "accountId": "xyz",
+        "sessionContext": {
+          "sessionIssuer": {},
+          "webIdFederationData": {},
+          "attributes": {
+            "mfaAuthenticated": "false",
+            "creationDate": "2021-02-18T05:32:31Z"
+          }
+        }
+      },
+      "eventTime": "2021-02-18T08:43:41Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "ap-south-1",
+      "sourceIPAddress": "0.0.0.0",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "groupId": "sg-xxxx",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 80,
+              "toPort": 80,
+              "groups": {},
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "0.0.0.0/0",
+                    "description": "alert-testing"
+                  }
+                ]
+              },
+              "ipv6Ranges": {},
+              "prefixListIds": {}
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "requestId": "e33580ca-9f13-452d-8781",
+        "_return": "True"
+      },
+      "requestID": "e33580ca-9f13-452d-8781",
+      "eventID": "b3ec7596-8bfc-4a40-a986",
+      "readOnly": "False",
+      "eventType": "AwsApiCall",
+      "managementEvent": "True",
+      "eventCategory": "Management"
+    }
+}
